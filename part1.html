@@ -1,15 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src = "object_constructor.js"></script>   
-    
+    <!--<script src = "nested_objects.js"></script> -->
+
 </head>
+
 <body>
-    
-         
+    <ul class="cl">list1
+
+    </ul>
+    <ul id="name">list2
+    </ul>
+    <ul class="cl">
+        list3
+    </ul>
+    <h2>heading1</h2>
+    <div id="div1">
+    <p>pargraph1</p>
+    <h2>heading2</h2>
+    <p>pargraph2</p>
+    <h2>heading3</h2>
+    <p>pargraph3</p>
+    </div>
+
+    <script>
+        let div2 = document.getElementById("div1");
+        let elm = div2.getElementsByTagName("h2");
+        for(let i = 0;i<elm.length;i++ ){
+            elm[i].innerHTML="hello"
+        }
+    </script>
 
 </body>
+
 </html>

@@ -1,0 +1,46 @@
+<!--//travesing element se hum child element se perent 
+//element ko call kr sakte hai--//
+//jaise man lo hame kisi p tag se div yaa class ko 
+//manuplate krna hai toh kr skte hai abhi tk hum perent element se 
+//tag element ko change kr rhe the lekin abhi
+// hum tag element se div ya class element ko change krenge -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <div>
+        <ul id="detail">
+            <li id ="Intro">list1</li>
+            <li>list2</li>
+            <li>list3</li>
+            <li>list4</li>
+        </ul>
+        <u>
+            <li>list a</li>
+            <li>list b</b></li>
+            <li>list c</li>
+            <li>list d</li>
+        </u>
+        <script>
+            let elm = document.getElementById("Intro")
+            <!-- elm me intro id ko define kiya-->
+        let prt = elm.parentElement;
+        //<!--prt mai elm id ke perent tag ul ko defin kiya-->
+        //prt.innerHTML="Hello"  ;//issne pahli ul yaani perent id ko change kr diya 
+        //console.log(prt)//output :- hello
+        let idd = document.getElementById("detail");
+        let fir= idd.firstElementChild;// id ke first elemnt ko select krne ke liye
+        let las= idd.lastElementChild;// last element ko select
+        let aal= idd.children; 
+        console.log(fir);
+        console.log(las);
+console.log(aal)
+        </script>
+     </div>
+    
+</body>
+</html>
