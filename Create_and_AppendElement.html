@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--abhi tk hum html tags mai jo bhi kr rhe the usse
+    woh change kr rha tha ab agr hum chahte hai ki kisi tag
+ya statment ko aage jodna toh ussme use hoga append -->
+<div id="intro">
+    <p>hello this is a p tag</p>
+
+</div>
+<script>
+    let elm = document.getElementById("intro");// issne intro id ko access kiya
+
+    let h1 = document.createElement("h1");// intro id mai h1 elemnt banay
+let h2 = document.createElement("h2")
+    h1.className ='newClass';
+    h1.id = 'idd';
+let text = document.createTextNode("This is a H1 Heading");//iss mai hum sirf text create  krenge
+h1.appendChild(text); //h1 mai text dalne ke liye  
+elm.appendChild(h1);//iss se humne intro id mai h1 declair kiya jo 
+
+//hamne elm varible me declair kiya hai
+document.body.appendChild(h2);// body mai element select krne ke liye
+//h1.textContent = "text edit"
+
+</script>
+</body>
+</html>
