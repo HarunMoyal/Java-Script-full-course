@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="menu">
+        <li>Home</li>
+        <li>Product</li>
+        <li>About us</li>
+    </ul>
+    <script>
+        let parent = document. getElementById("menu");//perent var mai menu id declair ki
+        let item = document. createElement( ("li"));// item var mai ek li crete ki
+        item. textContent = "Services";//uss li mai text declair kiya
+        let replace = parent. firstElementChild.nextElementSibling;//iss se hemaara <li>product </li> select ho gya
+        parent.replaceChild(item, replace);//iss function se hum item var ko replace var me change kr denge
+    </script>
+    
+    
+    
+</body>
+</html>
