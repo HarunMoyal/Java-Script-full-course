@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">name
+        <input type="text" id="myInput">
+    </form>
+    <br>
+    <form action="">age
+        <input type="number" id="numInput">
+    </form>
+    <script>
+        let name = document.getElementById("myInput");
+        let age = document.getElementById("numInput");
+        // name.addEventListener('focus',FocusFunction);
+        // name.addEventListener('blur',BlurFunction);
+        // age.addEventListener('focus',FocusFunction);
+        // age.addEventListener('blur',BlurFunction);
+
+        // function FocusFunction(){
+        //     this.style.background ="yellow";
+        // }
+        // function BlurFunction(){
+        //     this.style.background ="red";
+        // }
+        
+        name.addEventListener('input',function(){
+            console.log('Name:-',name.value);
+        });
+        age.addEventListener('input', function(){
+            
+            console.log('Age:-', age.value);
+            if(age.value <18){
+                console.log("you are no adult")
+            }else
+            console.log("you are adult", age.value)
+        });
+        
+
+    </script>
+</body>
+</html>

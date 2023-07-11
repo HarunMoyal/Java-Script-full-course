@@ -6,11 +6,31 @@
     <title>Document</title>
 </head>
 <body>
-    <button id="btn" onclick="btn1()">Click Me</button>
+    <!--<button id="btn" onclick="btn1()">Click Me</button>yeh inline element haiyeha se hame btn1 function ko call kiya
+    on click mtlb iss button ko click kre yeh fun call ho jaayega-->
+    <button id="btn">click me!</button>
 <script>
     function btn1(){
-        document.write("Button Click ")
+        console.log("Button Click 1");
+        
     }
+    let btn2 = document.getElementById("btn")//btn id ko btn2 var mai store kiya
+    btn2.addEventListener('click',btn1);//iss fun se click event se btn2 fun ko call krege
+btn2 = addEventListener("mouseover", function(){//iss me anoumonus fun bhi use kr sakte hai
+    console.log("mouse over is activated");//jab hum mouse ko button ke uper lekrjaayege tb yeh 
+    //function chalega
+});
+btn2 = addEventListener("mouseout", function(){//aur jab hum mouse ko hetayge tb yeh function chalega
+    console.log("mouse out is activated");
+
+});
+ window.addEventListener('keydown',checkKey);//window mai humne konsa button click kiya hai 
+ //woh yeh bta deta hai
+ function checkKey(eve){
+    console.log(eve.key);
+ }
+ 
+
 </script>
 </body>
 </html>
