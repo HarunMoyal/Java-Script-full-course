@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<button type="button" id="btn" onclick="fun()">Redirect to google</button>    
+<script>
+    //current broweser ke baare mai jankari lena aur location lena
+    //broweser ko redirect krne ke liye
+    console.log(location.href);// iss me pura address mil jaayega
+    console.log(location.pathname);///iss mai pathname
+    console.log(location.protocol);//iss mai protocol type
+
+
+    function fun(){
+    window.location  = "https://www.google.com";
+    
+}
+</script>
+</body>
+</html>
