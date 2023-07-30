@@ -92,3 +92,69 @@
 // let arry = ["salman","Shahrukh khan","Sunny","Aamir","Akshay Kumar"];
 // let arr2 = returnFiveChar(arry);
 // console.log(arr2);
+
+//question number 8
+
+// function SameNum(arr1,arr2){
+//     let SameValue = [];
+//     for(let i=0;i<arr1.length;i++){
+//         if(arr2.includes(arr1[i])){
+//             SameValue.push(arr1[i]);
+//         }
+//     }
+//     return SameValue;
+// }
+
+// let num1=[1,2,3,5,6,9,11,10,8];
+
+// let num2 = [1,8,6,3,9,10,12];
+
+// let same = SameNum(num1,num2);
+// console.log(same);
+
+//question number 9
+// function square(num){
+//     let squareNum = [];
+//     for(let i=0;i<num.length;i++){
+// squareNum.push(num[i]*num[i]);
+//     }
+//     return squareNum;
+// }
+// let num1 = [1,2,3,4,5,6];
+// console.log(square(num1));
+
+//question number 10
+// function Average(arr){
+//     sum =0;
+//     for(let i =0;i<arr.length;i++){
+// sum+=arr[i];
+//     }
+//     let ave =0;
+//     ave = sum/arr.length;
+//     return ave;
+// }
+
+// let num = [3,5,2,1];
+// console.log(Average(num));
+
+//question number 11
+
+// function outOfFive(num){
+//     let Long_5 = num.filter(value=>value>5);
+//     return Long_5;
+// }
+
+// let arr=[4,8,5,2,6,9,11,20,8];
+// console.log(outOfFive(arr));
+
+//question number 12
+// function plusOne(arr){
+//     let plus_1 = arr.map(value=> value+1);
+//     return plus_1;
+// }
+// let num=[10,20,30,40,50];
+// console.log(plusOne(num));
+
+
+//question number 13
+
