@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1== Given an array numbers, how do you add a new element 5 to the end of the array?
+        let number = [1, 2, 3, 4];
+        number.push(5);
+        console.log(number);
+
+        //2== How can you check if an array fruits contains the value "apple"?
+        let fruits = ["Orange", "Mango", "Kiwi", "Apple"];
+        let appl = fruits.includes("Apple");
+        if (appl) {
+            console.log("Apple in Basket");
+        } else {
+            console.log("Apple is not in Basket");
+        }
+
+
+        //other method
+        let fruit = ["Orange", "Mango", "Kiwi", "Banana"];
+        let flag = false;
+        for (let i = 0; i < fruit.length; i++) {
+
+            if (fruit[i] === "Apple") {
+                flag = true;
+                break;
+            }
+        }
+        if (flag === true) {
+            console.log("Apple is in Basket");
+        } else {
+            console.log("Apple is not in Basket");
+        }
+       //3== What method can you use to remove the last element from an array colors? 
+let colors = ["orange","red","blue","green"];
+let remove = colors.pop();
+console.log("Remove Color",remove);
+console.log("New color list",colors);
+
+//4==How do you find the number of elements in an array grades?
+let grades = [70,98,85,74,88,98];
+console.log("number of element is:",grades.length)
+
+//5==Given an array words, how can you join all its elements into a single string separated by commas?
+let words = ["Aamir","Shahrukh","Akshay","Salman"];
+console.log(words.join(", "));
+
+//6==Given an array fruits, how do you add a new element "banana" to the beginning of the array?
+fruits.unshift("Banana");
+console.log(fruits);
+
+//7==How can you check if an array numbers is empty (contains no elements)?
+let num =[];
+if(num.length===0){
+    console.log("number is empty");
+}else{
+    console.log("number is not empty");
+}
+
+//8==: What method can you use to remove the first element from an array animals?
+let animals= ["Lion","Tiger","Horse","Monkey"];
+console.log("Remove Animal",animals.shift());
+console.log("new list of animals",animals);
+
+//9==How do you find the largest number in an array scores?
+let scores = [87,85,65,99,100,98];
+console.log(Math.max(...scores));
+
+//10= Given an array names, how can you add multiple names, "Alice" and "Bob", to the end of the array in one step?
+let actor = ["james","Amitabh"];
+actor.push("Alice","Bob")
+console.log(actor);
+
+//11=Write a function that takes an array of numbers and returns the sum of all the positive numbers in the array.
+function SumOfPositiveNumbers(num){
+    let sum=0;
+    for(let number of num){
+        if(number>0){
+            sum+=number;
+        }
+    }
+    return sum;
+}
+let n = [1,5,-9,6,-3,-1,7,9];
+console.log("Sum Of Pisitive Number",SumOfPositiveNumbers(n));
+
+//12Given an array names, how can you create a new array containing only the names that start with the letter "A"?
+let Aname= actor.filter((name)=> name.startsWith("A"));
+console.log(Aname);
+
+//13=How do you reverse the order of elements in an array characters?,
+let char =["A","B","C","D","E","F"];
+char.reverse();
+console.log(char);
+
+//14=Write a function that takes an array of strings and returns a new array with the strings sorted in alphabetical order.
+actor.sort();
+console.log(actor);
+char.sort();
+console.log(char);
+
+//15= Given an array numbers, how can you find the index of the first occurrence of the number 7?
+let numSeven= n.indexOf(7);
+
+if(numSeven){
+console.log("the first occurrence of the 7 is",numSeven);
+
+}else{
+    console.log("7 number is not in array")
+}
+
+//16
+function longStr(arr){
+    let longest = arr[0];
+    for(let i=1;i<arr.length;i++){
+if(arr[i].length>longest.length){
+    longest=arr[i];
+}
+    }
+    return longest;
+}
+let str = longStr(actor);
+console.log(str);
+
+//17Given two arrays, arr1 and arr2, how can you combine them into a single array combinedArray?
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+
+const bothArray = [...arr1, ...arr2];
+
+console.log(bothArray); 
+
+//18==How do you remove all duplicate values from an array values?
+
+let value = [10,25,25,30,3,30,36,10,10];
+let noRepeat = [...new Set(value)];
+
+console.log(noRepeat);
+
+//19=  Write a function that takes an array of objects representing people with name, age, and city properties and returns an array of just the names.
+function name(people){
+    let names =[];
+    for (let i of people){
+       names.push(i.name); 
+    }
+    return names;
+}
+let people = [
+    {name:"Harun", age:39,city:"Merta"},
+    {name: "Sajid", age: 35, city:"Jaipur"},
+    {name:"Nadim",age:34, city:"Makrana"}
+];
+let getName = name(people);
+console.log(getName);
+
+//20 Given an array numbers, how do you find the sum of all even numbers in the array?
+function addEvenNum(numbers){
+    let sum = 0;
+  for (const number of numbers) {
+            if(number % 2 === 0){
+            sum += number;
+        }
+    }
+    return sum;
+}
+let numbers= [2,89,74,55,22,20,33];
+let sumEv = addEvenNum(numbers);
+console.log(sumEv);
+
+//21=Question: Write a function that takes an array of numbers and returns a new array with only the unique values (no duplicates).
+function unique(arr){
+    let uniqueNum=[];
+    for(let number of arr){
+        if(!uniqueNum.includes(number)){
+uniqueNum.push(number);
+        }
+    }
+    return uniqueNum;
+}
+let val = [1,1,2,5,5,6,6,3,9,7]
+let un = unique(val);
+console.log(un);
+
+
+//22==================================How can you implement a custom map function that works like the built-in Array.prototype.map?
+//23==    Write a function that takes two arrays, arr1 and arr2, and returns a new array containing the elements that appear in both arrays (intersection).
+function SameArray(arr1,arr2){
+    let same = [];
+    for(let number of arr2){
+        if(arr1.includes(number)){
+            same.push(number);
+        }
+    }
+    return same;
+}
+    let ar1= [1,2,3,4,5,6];
+    let ar2 = [1,5,9,6,3,8];
+    console.log(SameArray(ar1,ar2));
+
+    //24=Given an array of objects people, how can you find the person with the highest age?
+    let People = [
+        {Name: "Harun",Age: 39},
+        {Name: "Saad",Age: 20},
+        {Name: "Sardar",Age: 25},
+
+    ];
+    let longAge= People[0];
+    
+    for(let i=0;i<People.length;i++){
+if(People[i].age>longAge.age){
+    longAge= People[i];
+}
+    }
+    console.log(longAge)
+    </script>
+</body>
+
+</html>
