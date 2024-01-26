@@ -1,5 +1,4 @@
-//=======================
-//question no.1
+//=====question no.1
 // let hour = 0;
 // let minute = 0;
 // let second = 0;
