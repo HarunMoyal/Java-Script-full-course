@@ -11,4 +11,4 @@ deposit();
 import * as usr from'./modules2.js';// kisi ek file ke sabhi export ko lekr usr naam me declair kiye
 usr.deposit();//aur unhe call iss trah se karvayenge
 import{default as hm} from'./modules1.js';
-hm();
+hm();//default fun ko naam dena zaruri hai
